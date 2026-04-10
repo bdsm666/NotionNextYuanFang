@@ -1,7 +1,6 @@
 import { BeiAnGongAn } from '@/components/BeiAnGongAn'
 import CopyRightDate from '@/components/CopyRightDate'
 import { siteConfig } from '@/lib/config'
-// import SocialButton from './SocialButton' 已经被彻底切除
 
 /**
  * 页脚
@@ -12,12 +11,14 @@ const Footer = () => {
   const BEI_AN_LINK = siteConfig('BEI_AN_LINK')
   const BIO = siteConfig('BIO')
   return (
-    <footer className='relative text-gray-500 text-sm text-center flex flex-col items-center justify-center w-full'>
+    // mt-12: 保证页脚和上面的翻页按钮有一段舒适的距离
+    <footer className='relative text-gray-500 text-sm text-center flex flex-col items-center justify-center w-full mt-12'>
       
-      {/* 底部页面信息（去掉了所有多余空白，完全紧凑） */}
+      {/* 底部页面信息 */}
+      {/* py-8: 撑开上下高度，达到 Astra 主题那种舒适的呼吸感 */}
       <div
         id='footer-bottom'
-        className='w-full flex flex-col p-4 justify-center items-center gap-2 bg-[#f1f3f7] dark:bg-[#21232A] border-t dark:border-t-[#3D3D3F]'>
+        className='w-full flex flex-col py-8 px-4 justify-center items-center gap-2 bg-[#f1f3f7] dark:bg-[#21232A] border-t dark:border-t-[#3D3D3F]'>
         
         {/* 左侧信息块 */}
         <div id='footer-bottom-left' className='text-center flex flex-col items-center'>
