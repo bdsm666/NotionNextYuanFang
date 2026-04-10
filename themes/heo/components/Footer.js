@@ -1,8 +1,9 @@
 import { BeiAnGongAn } from '@/components/BeiAnGongAn'
 import CopyRightDate from '@/components/CopyRightDate'
-import PoweredBy from '@/components/PoweredBy'
+// import PoweredBy from '@/components/PoweredBy' // 我们不需要引用这个组件了，所以我把它注释掉了
 import { siteConfig } from '@/lib/config'
 import SocialButton from './SocialButton'
+
 /**
  * 页脚
  * @returns
@@ -26,13 +27,15 @@ const Footer = () => {
 
       <br />
 
-      {/* 底部页面信息 */}
+      {/* 底部页面信息（去掉了强制两端对齐，全部改为中心对齐） */}
       <div
         id='footer-bottom'
-        className='w-full h-20 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#21232A] border-t dark:border-t-[#3D3D3F]'>
-        <div id='footer-bottom-left' className='text-center lg:text-start'>
-          <PoweredBy />
-          <div className='flex gap-x-1'>
+        className='w-full flex flex-col p-4 justify-center items-center gap-2 bg-[#f1f3f7] dark:bg-[#21232A] border-t dark:border-t-[#3D3D3F]'>
+        
+        {/* 左侧信息块（去掉了电脑端强制靠左，改为全局居中） */}
+        <div id='footer-bottom-left' className='text-center flex flex-col items-center'>
+          {/* <PoweredBy /> 已经把这个原作者的标志删掉了！ */}
+          <div className='flex gap-x-1 justify-center mt-1'>
             <CopyRightDate />
             <a
               href={'/about'}
@@ -43,7 +46,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div id='footer-bottom-right'>
+        {/* 右侧信息块（加上了居中对齐） */}
+        <div id='footer-bottom-right' className='text-center flex justify-center items-center flex-wrap gap-2 mt-2'>
           {BEI_AN && (
             <>
               <i className='fas fa-shield-alt' />{' '}
@@ -62,8 +66,6 @@ const Footer = () => {
             <i className='fas fa-users' />{' '}
             <span className='px-1 busuanzi_value_site_uv'> </span>{' '}
           </span>
-
-          {/* <h1 className='text-xs pt-4 text-light-400 dark:text-gray-400'>{title} {siteConfig('BIO') && <>|</>} {siteConfig('BIO')}</h1> */}
         </div>
       </div>
     </footer>
