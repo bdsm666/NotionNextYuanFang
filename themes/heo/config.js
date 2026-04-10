@@ -17,7 +17,7 @@ const CONFIG = {
   // 英雄区(首页顶部大卡)
   HEO_HERO_TITLE_1: '老年人坐而论道',
   HEO_HERO_TITLE_2: '少年郎起而行之',
-  HEO_HERO_TITLE_3: '111',
+  HEO_HERO_TITLE_3: 'qq20397520',
   HEO_HERO_TITLE_4: '2222',
   HEO_HERO_TITLE_5: '33333',
   HEO_HERO_TITLE_LINK: '',
