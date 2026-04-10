@@ -16,6 +16,7 @@ import CONFIG from '../config'
  * @returns
  */
 const Hero = props => {
+  return null //
   const HEO_HERO_REVERSE = siteConfig('HEO_HERO_REVERSE', false, CONFIG)
   return (
     <div
