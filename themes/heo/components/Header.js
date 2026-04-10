@@ -3,13 +3,10 @@ import { isBrowser } from '@/lib/utils'
 import throttle from 'lodash.throttle'
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import DarkModeButton from './DarkModeButton'
 import Logo from './Logo'
 import { MenuListTop } from './MenuListTop'
-import RandomPostButton from './RandomPostButton'
-import ReadingProgress from './ReadingProgress'
-import SearchButton from './SearchButton'
 import SlideOver from './SlideOver'
+// 已经被完美切除的：DarkModeButton, RandomPostButton, ReadingProgress, SearchButton
 
 /**
  * 页头：顶部导航
@@ -165,13 +162,9 @@ const Header = props => {
             </div>
           </div>
 
-          {/* 右侧固定 */}
+          {/* 右侧固定 (彻底移除了信号塔、搜索、月亮和进度条) */}
           <div className='flex flex-shrink-0 justify-end items-center w-48'>
-            {!JSON.parse(siteConfig('THEME_SWITCH')) && (
-              </div>
-            )}
-
-            {/* 移动端菜单按钮 */}
+            {/* 移动端菜单按钮 (保留，否则手机端打不开导航) */}
             <div
               onClick={toggleMenuOpen}
               className='flex lg:hidden w-8 justify-center items-center h-8 cursor-pointer'>
