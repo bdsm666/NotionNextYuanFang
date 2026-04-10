@@ -170,7 +170,6 @@ const Header = props => {
             {!JSON.parse(siteConfig('THEME_SWITCH')) && (
               </div>
             )}
-            <ReadingProgress />
 
             {/* 移动端菜单按钮 */}
             <div
