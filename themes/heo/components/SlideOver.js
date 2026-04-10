@@ -100,7 +100,6 @@ export default function SlideOver(props) {
                         <div className='text-sm text-gray-500 font-bold tracking-widest'>站点导航</div>
                         <div className='gap-3 grid grid-cols-2'>
                           <Button title={'主页'} url={'/'} />
-                          <Button title={'关于'} url={'/about'} />
                         </div>
                         <MenuListSide {...props} />
                       </section>
